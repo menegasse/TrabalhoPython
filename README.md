@@ -1,6 +1,6 @@
 # TrabalhoPython
 
-#TELAS:
+TELAS:
 
 - Login
 - Cadastro
