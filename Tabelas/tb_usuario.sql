@@ -6,4 +6,4 @@ CREATE TABLE tb_usuario
   nome_user character varying(255),
   senha character varying(255),
   email character varying(255)
-)
+);
