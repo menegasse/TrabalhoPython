@@ -28,3 +28,11 @@ class Banco():
         linha = cur.fetchall()
         self.connection.close()
         return linha 
+    
+    def recupera_senha(self,email=''):
+         sql =f"SELECT senha FROM tb_usuario WHERE email = '{email}'"
+         cur = self.connection.cursor()
+         cur.execute(cur.mogrify(sql))
+         linha = cur.fetchall()
+         self.connection.close()
+         return linha 

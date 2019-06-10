@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox as msgbox
 from Banco import *
 from string import punctuation
+from Email import *
 
 class Sistema(Frame):
     def __init__(self):
@@ -309,7 +310,7 @@ class Sistema(Frame):
         self.__init__()
 
     def btn_CadastrarClick(self,event):
-        idade = 0 if self.entry_idade.get() ==  "" else self.entry_idade.get()
+        idade = 0 if self.entry_idade.get() ==  "" else int(self.entry_idade.get())
         usuario = self.entry_usuario.get()
         nome = self.entry_nome_completo.get()
         senha = self.entry_senha.get()
@@ -401,7 +402,17 @@ class Sistema(Frame):
         self.Recupera.mainloop()
 
     def btn_EnviarClick(self,event):
-        pass
+        bd = Banco()
+        try:
+            senha = bd.recupera_senha(self.entry_email.get())
+            if not len(senha)==0:
+                Email(self.entry_email.get(),senha)
+                msgbox.showinfo("Email","Senha enviada por Email!")
+                self.btn_CancelarClick()
+            else:
+                msgbox.showerror("Erro","Email invalido!")
+        except ValueError:
+            msgbox.showerror("Erro","Email invalido!")
     def btn_CancelarClick(self,event):
         self.Recupera.destroy()
         self.__init__()
