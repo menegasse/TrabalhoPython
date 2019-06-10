@@ -16,7 +16,7 @@ class Sobre(Frame):
         self.f_titulo.pack(fill=X)
 
         self.l_titulo = Label(self.f_titulo)
-        self.l_titulo['text'] = "O Aplicativo desenvolvido tem o objetivo de mostrar informações\nsobre os jogadores do jogo League of Leagend, atraves do\nconsumo da API da RiotGames (desenvolvedora do jogo) e de\nalgumas API terceiras!\n\n\nAlunos: \n\n-Hugo Cossalter Menegasse RA:2840481621016\n\n-Lucas (Cardosinho) RA:?"
+        self.l_titulo['text'] = "O Aplicativo desenvolvido tem o objetivo de mostrar informações\nsobre os jogadores do jogo League of Leagend, atraves do\nconsumo da API da RiotGames (desenvolvedora do jogo) e de\nalgumas API terceiras!\n\n\nAlunos: \n\n-Hugo Cossalter Menegasse RA:2840481621016\n\n-Lucas Cardoso de Assis(Cardosinho) RA:2840481613024"
         self.l_titulo['font'] = "Helvetica 12"
         self.l_titulo.pack(side=LEFT,pady=10)
 
