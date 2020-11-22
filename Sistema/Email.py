@@ -5,7 +5,7 @@ class Email():
    def __init__(self,email='',senha=''):
     smtp = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 
-    smtp.login('menegassehugo12@gmail.com', '36380170h')
+    smtp.login('teste@gmail.com', 'passwordteste')
 
     de = 'menegassehugo12@gmail.com'
     para = [f'{email}']
